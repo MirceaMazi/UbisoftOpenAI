@@ -1,44 +1,49 @@
-import React from 'react';
+import React from "react";
 import "./Home.css";
-import {useNavigate} from "react-router-dom";
-import ChatPopUp from "../../components/ChatPopUp/ChatPopUp";
+import { useNavigate } from "react-router-dom";
 
 function Home(props) {
+  let navigate = useNavigate();
+  const routeChange = (path) => {
+    navigate(`${path}`);
+  };
 
-    let navigate = useNavigate();
-    const routeChange = (path) => {
-        navigate(`${path}`)
-    }
-
-    return (
-
-        <div className={"container"}>
-            <header>
-                <h1>Choose your activity!</h1>
-            </header>
-            <div className={"wrapper"}>
-                <div className="fortune-teller-page">
-                    <img
-                        src={"https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-easy-drawings-for-beginners-to-draw-64.jpg"}
-                        className={"grow-img"}
-                        alt={"guessing-page"}
-                        onClick={() => routeChange("/fortune-teller")}
-                    />
-
-                </div>
-                <div className="drawing-page">
-                    <img
-                        src={"https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-easy-drawings-for-beginners-to-draw-10.jpg"}
-                        className={"grow-img"}
-                        alt={"guessing-page"}
-                        onClick={() => routeChange("/drawer ")}/>
-                </div>
-            </div>
-            <footer>
-                <ChatPopUp/>
-            </footer>
+  return (
+    <div className="all-page-container">
+      <main className="main-content-cantainer">
+        <div
+          id="fortune-teller-page"
+          className="activity-container"
+          onClick={() => routeChange("/fortune-teller")}
+        >
+          <img
+            src="https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-easy-drawings-for-beginners-to-draw-64.jpg"
+            className="activity-cover-image"
+            alt="guessing-page"
+          />
+          <p className="image-caption">Smaranda Fortune Teller</p>
         </div>
-    );
+        {/*  */}
+
+        <div className="title-container">
+          <h1>Choose your activity!</h1>
+        </div>
+        {/*  */}
+        <div
+          id="drawing-page"
+          className="activity-container"
+          onClick={() => routeChange("/drawer ")}
+        >
+          <img
+            src="https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-easy-drawings-for-beginners-to-draw-10.jpg"
+            className="activity-cover-image"
+            alt="guessing-page"
+          />
+          <p className="image-caption">DaVinci Little Painter</p>
+        </div>
+      </main>
+    </div>
+  );
 }
 
 export default Home;

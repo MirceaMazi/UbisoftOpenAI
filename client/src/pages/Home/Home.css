@@ -1,36 +1,71 @@
-
 body {
-    /*background-color: black;*/
-    overflow:hidden;
-    background-image:url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg");
-    background-size: cover;
+  /*background-color: black;*/
+  overflow: hidden;
+  background-image: url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg");
+  background-size: auto;
+  background-position: center;
+}
 
+.all-page-container {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header */
+
+.title-container {
+  background-color: black;
+  border-radius: 40px;
+  opacity: 0.6;
+  flex: 1 2 0%;
+  max-width: 300px;
 }
 
 h1 {
-    color: white;
+  color: white;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 5vmin;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.container {
-    display: grid;
-    justify-content: space-evenly;
-    place-items: center;
-    height: 100vh;
-    background-color: black;
-    margin: 0 50%;
+/* Main content */
+
+.main-content-cantainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-gap: 5vmin;
+  width: 95vw;
+  height: 100vh;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
+.activity-container {
+  flex: 2 1 0%;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
 
-img {
-    width: 300px;
-    height: 500px;
+.activity-container:hover {
+  transform: scale(1.2);
 }
 
-.grow-img:focus {
-    transform: scale(1.3);
+.activity-cover-image {
+  flex: 9 1 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.image-caption {
+  flex: 1 9 0%;
+  text-align: center;
+  color: white;
+  font-size: 3vmin;
 }
