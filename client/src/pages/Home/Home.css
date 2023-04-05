@@ -1,12 +1,13 @@
 body {
-  /*background-color: black;*/
   overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.home-page-container {
   background-image: url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg");
   background-size: auto;
   background-position: center;
-}
-
-.all-page-container {
   display: flex;
   justify-content: center;
   place-items: center;

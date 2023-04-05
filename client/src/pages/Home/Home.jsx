@@ -9,7 +9,7 @@ function Home(props) {
   };
 
   return (
-    <div className="all-page-container">
+    <div className="home-page-container">
       <main className="main-content-cantainer">
         <div
           id="fortune-teller-page"

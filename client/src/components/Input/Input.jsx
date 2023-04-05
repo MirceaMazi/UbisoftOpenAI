@@ -1,63 +1,34 @@
-// import React, { useState } from 'react';
-// import './Input.css';
-//
-// function Input(props) {
-//     const [messages, setMessages] = useState([]);
-//     const [inputValue, setInputValue] = useState('');
-//
-//     const handleInputChange = (event) => {
-//         setInputValue(event.target.value);
-//     };
-//
-//     const handleSendMessage = (event) => {
-//         event.preventDefault();
-//         if (inputValue.trim() !== '') {
-//             setMessages([...messages, { text: inputValue, sender: 'user' }]);
-//             setInputValue('');
-//         }
-//     };
-//
-//     return (
-//         <div className="chat">
-//             <div className="chat-history">
-//                 {messages.map((message, index) => (
-//                     <div key={index} className={`message ${message.sender}`}>
-//                         <div className="message-text">{message.text}</div>
-//                     </div>
-//                 ))}
-//             </div>
-//             <form className="chat-input" onSubmit={handleSendMessage}>
-//                 <input
-//                     type="text"
-//                     placeholder="Type a message..."
-//                     value={inputValue}
-//                     onChange={handleInputChange}
-//                 />
-//                 <button type="submit">Send</button>
-//             </form>
-//         </div>
-//     );
-// }
-//
-// export default Input;
-import React from 'react';
+import React from "react";
+import "./Input.css";
 
-const Input = () => {
-    return (
-        <div
-            style={{
-                width: '66.67%',
-                position: 'fixed',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                margin: 'auto',
-                marginBottom:'10px'
-            }}
-        >
-            <input type="text" placeholder="Enter your text here" style={{ width: '100%', padding: '1rem' }} />
-        </div>
-    );
+const Input = (props) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //Opreste pagina din a da refresh
+    const inputPrompt = document.getElementById("input");
+    // console.log(inputPrompt);
+    props.setPrompt(() => {
+      // console.log(inputPrompt.value);
+      console.log(props.prompt);
+      return inputPrompt.value;
+    });
+
+    // inputPrompt.value = "";
+  };
+
+  return (
+    <div className="input-container">
+      <form className="form-container" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Enter your text here"
+          className="input-text"
+          id="input"
+        />
+        <button className="input-button" type="submit"></button>
+      </form>
+    </div>
+  );
 };
 
 export default Input;
