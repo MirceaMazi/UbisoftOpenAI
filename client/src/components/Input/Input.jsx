@@ -6,14 +6,9 @@ const Input = (props) => {
     event.preventDefault();
     //Opreste pagina din a da refresh
     const inputPrompt = document.getElementById("input");
-    // console.log(inputPrompt);
-    props.setPrompt(() => {
-      // console.log(inputPrompt.value);
-      console.log(props.prompt);
-      return inputPrompt.value;
-    });
+    props.setPrompt(inputPrompt.value);
 
-    // inputPrompt.value = "";
+    inputPrompt.value = "";
   };
 
   return (

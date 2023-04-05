@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 15.7px;" x="563.901" y="237.108"> </text>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="59.417" cy="357.063" rx="8.408" ry="8.408"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="78.475" cy="334.081" rx="10.65" ry="10.65"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="99.496" cy="308.016" rx="15.415" ry="13.733"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="237.669" cy="250.56" rx="126.121" ry="63.902"/>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 15.7px;" x="122.758" y="249.439" transform="matrix(1.339702, 0, 0, 1.678689, -26.006035, -173.761978)">What do you want me<tspan x="122.75800323486328" dy="1em">​</tspan>to draw today?</text>
+</svg>
