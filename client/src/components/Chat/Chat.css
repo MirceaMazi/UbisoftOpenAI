@@ -4,8 +4,8 @@
     background-color: #f1f1f1;
     border-radius: 5px;
     overflow: hidden;
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 300px;
     position: fixed;
     right: 50px;
     bottom: 50px;
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #82EEFD;
+    background-color: lightslategray;
     color: #fff;
     padding: 10px;
     font-size: 18px;
@@ -29,6 +29,7 @@
 
 .chat-messages > div {
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .chat form {
@@ -47,12 +48,12 @@
 }
 
 .chat form button {
-    padding: 10px;
+    padding: 6px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 5px;
     cursor: pointer;
 }
 
@@ -60,17 +61,42 @@
     background-color: #3e8e41;
 }
 
+/*.close-button {*/
+/*    background-color: ghostwhite;*/
+/*    color: #333;*/
+/*    border: none;*/
+/*    border-radius: 20%;*/
+/*    padding: 5px;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.close-button:hover {*/
+/*    background-color: #ccc;*/
+/*}*/
 .close-button {
-    background-color: ghostwhite;
-    color: #333;
-    border: none;
-    border-radius: 20%;
-    padding: 5px;
-    font-size: 16px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.close-button:hover {
-    background-color: #ccc;
+.close-button::before,
+.close-button::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }

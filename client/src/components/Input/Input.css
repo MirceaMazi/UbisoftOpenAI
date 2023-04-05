@@ -1,9 +1,69 @@
+/*.input-container {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  width: 66.66%;*/
+/*  max-width: 800px;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*.form-container {*/
+/*  display: flex;*/
+/*  width: 100%;*/
+/*  justify-content: center;*/
+/*  border-radius: 10px;*/
+/*}*/
+
+/*.input-text {*/
+/*  width: 90%;*/
+/*  padding: 1rem;*/
+/*}*/
+
+/*.input-button {*/
+/*  width: 10%;*/
+/*  max-width: 50px;*/
+/*}*/
+
+/*.input-button {*/
+/*  background-image: url("https://cdn-icons-png.flaticon.com/512/3106/3106794.png");*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: contain;*/
+/*  background-position: center;*/
+/*  border: none;*/
+/*  !*color: white;*!*/
+/*  !*padding: 10px 20px;*!*/
+/*  padding: 0.7em 1.4em;*/
+/*  font-size: 1.2rem;*/
+/*  text-align: center;*/
+/*  text-decoration: none;*/
+/*  display: inline-block;*/
+/*  !*font-size: 16px;*!*/
+/*  cursor: pointer;*/
+/*  border-radius: 5px;*/
+/*  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);*/
+/*  transition: all 0.3s ease;*/
+/*  background-color: #007bff;*/
+/*  color: #fff;*/
+/*}*/
+
+/*!* Style the button on hover *!*/
+/*.input-button:hover {*/
+/*  !*background-color: #00688B; !* Darken the background color *!*!*/
+/*  background-color: #4CAF50;*/
+/*  border: 1px solid #4CAF50;*/
+/*}*/
+
+/*!* Style the button when active/pressed *!*/
+/*.input-button:active {*/
+/*  background-color: #004F6B; !* Darken the background color even more *!*/
+/*  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); !* Add a smaller shadow *!*/
+/*  transform: translateY(1px); !* Push the button down slightly *!*/
+/*}*/
 .input-container {
   display: flex;
   justify-content: center;
   width: 66.66%;
   max-width: 800px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 .form-container {
@@ -11,14 +71,47 @@
   width: 100%;
   justify-content: center;
   border-radius: 10px;
+  overflow: hidden; /* hide overflowing content */
 }
 
 .input-text {
   width: 90%;
   padding: 1rem;
+  border: none;
+  background-color: white;
+  border-radius: 10px 0 0 10px; /* rounded corners */
 }
 
 .input-button {
   width: 10%;
   max-width: 50px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3106/3106794.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+  padding: 0.7em 1.4em;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0; /* rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style the button on hover */
+.input-button:hover {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+/* Style the button when active/pressed */
+.input-button:active {
+  background-color: #004F6B;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(1px);
 }

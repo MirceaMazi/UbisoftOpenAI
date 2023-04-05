@@ -10,7 +10,7 @@ function Home(props) {
 
   return (
     <div className="home-page-container">
-      <main className="main-content-cantainer">
+      <main className="main-content-container">
         <div
           id="fortune-teller-page"
           className="activity-container"
@@ -35,9 +35,9 @@ function Home(props) {
           onClick={() => routeChange("/drawer ")}
         >
           <img
-            src="https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-easy-drawings-for-beginners-to-draw-10.jpg"
+            src="https://wonder-day.com/wp-content/uploads/2022/03/wonder-day-easy-drawings-for-beginners-to-draw-64.jpg"
             className="activity-cover-image"
-            alt="guessing-page"
+            alt="drawing-page"
           />
           <p className="image-caption">DaVinci Little Painter</p>
         </div>
