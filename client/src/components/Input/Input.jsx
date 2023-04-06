@@ -6,7 +6,7 @@ const Input = (props) => {
     event.preventDefault();
     //Opreste pagina din a da refresh
     const inputPrompt = document.getElementById("input");
-    props.setPrompt(inputPrompt.value);
+    props.handleResult(inputPrompt.value);
 
     inputPrompt.value = "";
   };
@@ -16,7 +16,7 @@ const Input = (props) => {
       <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter your text here"
+          placeholder={props.message}
           className="input-text"
           id="input"
         />
