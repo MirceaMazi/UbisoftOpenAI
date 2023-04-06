@@ -63,7 +63,7 @@
   justify-content: center;
   width: 66.66%;
   max-width: 800px;
-  /*margin-bottom: 20px;*/
+  margin-bottom: 20px;
 }
 
 .form-container {
@@ -78,8 +78,14 @@
   width: 90%;
   padding: 1rem;
   border: none;
-  background-color: white;
+  background-color: rgb(172, 171, 171);
+  color: black;
   border-radius: 10px 0 0 10px; /* rounded corners */
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .input-button {
@@ -105,13 +111,13 @@
 
 /* Style the button on hover */
 .input-button:hover {
-  background-color: #4CAF50;
-  border: 1px solid #4CAF50;
+  background-color: #4caf50;
+  border: 1px solid #4caf50;
 }
 
 /* Style the button when active/pressed */
 .input-button:active {
-  background-color: #004F6B;
+  background-color: #004f6b;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   transform: translateY(1px);
 }

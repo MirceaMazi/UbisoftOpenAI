@@ -1,6 +1,10 @@
+/* body {
+  background-image: url("/painterbg.png");
+} */
 .painter-page-container {
-  background-image: url("https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg");
-  background-size: auto;
+  background-image: url("../../assets/painterbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -17,23 +21,7 @@
   align-items: center;
 }
 
-.painter-container {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.painter-image {
-  transform: scaleX(-1);
-}
-
-.pop-up-message {
-  width: 500px;
-  align-self: flex-start;
-}
-
-.easel-container {
-  width: 500px;
-  height: 500px;
-  /* background-image: url("./../../images/easel-nobg.png"); */
+.resulted-image {
+  height: 300px;
+  width: 300px;
 }

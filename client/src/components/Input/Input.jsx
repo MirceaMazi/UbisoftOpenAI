@@ -7,6 +7,7 @@ const Input = (props) => {
     //Opreste pagina din a da refresh
     const inputPrompt = document.getElementById("input");
     props.setPrompt(inputPrompt.value);
+    props.handleResult();
 
     inputPrompt.value = "";
   };
@@ -16,7 +17,7 @@ const Input = (props) => {
       <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter your text here"
+          placeholder="What do you want me to draw today?"
           className="input-text"
           id="input"
         />
