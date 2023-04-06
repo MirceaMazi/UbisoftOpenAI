@@ -21,7 +21,6 @@ function Drawer() {
       //prettier-ignore
       "size": "256x256",
     };
-    console.log(apiBody);
     await fetch("https://api.openai.com/v1/images/generations", {
       method: "POST",
       headers: {
@@ -34,6 +33,9 @@ function Drawer() {
       .then((data) => data.json())
       .then((response) => {
         image.setAttribute("src", response.data[0].url);
+      })
+      .catch((err) => {
+        //Aici trebuie sa apara un div in locul imaginii in care sa scrie ceva de genul ca are o comanda foarte importanta de facut si nu a reusit sa iti faca si tie tabloul
       });
 
     //add it to the main section
