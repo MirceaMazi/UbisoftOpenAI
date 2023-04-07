@@ -1,10 +1,10 @@
-import "./Drawer.css";
+import "./Painter.css";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import noInputImage from "../../assets/pictor_no_input.png";
 
-function Drawer() {
+function Painter() {
   ////////////////////////////////////////////
   //Creaza imaginea in care se va pune rezultatul
   const image = document.createElement("img");
@@ -70,4 +70,4 @@ function Drawer() {
   );
 }
 
-export default Drawer;
+export default Painter;

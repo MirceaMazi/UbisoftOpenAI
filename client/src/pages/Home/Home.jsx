@@ -31,7 +31,7 @@ function Home() {
         <div
           id="drawing-page"
           className="activity-container"
-          onClick={() => routeChange("/drawer ")}
+          onClick={() => routeChange("/painter ")}
         >
           <img
             src={require("../../assets/Painter-card.png")}
