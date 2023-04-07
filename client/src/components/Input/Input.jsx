@@ -4,7 +4,6 @@ import "./Input.css";
 const Input = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    //Opreste pagina din a da refresh
     const inputPrompt = document.getElementById("input");
     props.handleResult(inputPrompt.value);
 

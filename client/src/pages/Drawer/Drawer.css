@@ -21,6 +21,9 @@
 .resulted-image {
   height: 300px;
   width: 300px;
+  border: none;
+  padding: none;
+  margin: none;
 }
 
 .input-text {
@@ -28,12 +31,10 @@
 }
 
 .responsive-image {
-  position:fixed;
-  left:12.9vw;
+  position: fixed;
+  left: 12.9vw;
   width: 40vw;
   height: auto;
-  /*max-width: 500px; !* Set a maximum width for the image *!*/
-  /*margin-left: -30px;*/
 }
 img {
   width: 100%;

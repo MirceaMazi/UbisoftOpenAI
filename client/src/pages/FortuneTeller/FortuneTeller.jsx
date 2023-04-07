@@ -1,13 +1,14 @@
 import Input from "../../components/Input/Input";
 import "./FortuneTeller.css";
-import ChatPopUp from "../../components/ChatPopUp/ChatPopUp";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 
 function FortuneTeller() {
-  async function createPainting(prompt) {
+  async function createMessage(prompt) {
     const messageEl = document.getElementById("response-message");
 
+    //Call the api
+    ///////////////////////////////////////////////////////////////////////
     const apiBody = {
       //prettier-ignore
       "model": "text-davinci-003",
@@ -18,8 +19,8 @@ function FortuneTeller() {
       //prettier-ignore
       "temperature": 0.7,
     };
-    console.log(process.env.REACT_APP_OPENAI_API_KEY);
-    if(prompt !== ""){
+
+    if (prompt !== "") {
       await fetch("https://api.openai.com/v1/completions", {
         method: "POST",
         headers: {
@@ -29,21 +30,20 @@ function FortuneTeller() {
         },
         body: JSON.stringify(apiBody),
       })
-          .then((data) => data.json())
-          .then((response) => {
-            messageEl.textContent = response.choices[0].text;
-          })
-          .catch((err) => {
-            console.log(err);
-            messageEl.textContent =
-                "It's too hard to focus so I cannot tell you right now the answer to that question!";
-          });
-    }
-    else{
+        .then((data) => data.json())
+        .then((response) => {
+          messageEl.textContent = response.choices[0].text;
+        })
+        .catch((err) => {
+          console.log(err);
+          messageEl.textContent =
+            "It's too hard to focus so I cannot tell you right now the answer to that question!";
+        });
+    } else {
       messageEl.textContent =
-          "I can't guess what question you want to ask. You have to write it!";
+        "I can't guess what question you want to ask. You have to write it!";
     }
-
+    //////////////////////////////////////////////////////////////////////
   }
   let navigate = useNavigate();
   const handleBackToHome = () => {
@@ -54,12 +54,9 @@ function FortuneTeller() {
       <Button onClick={handleBackToHome} />
       <div className="message" id="response-message"></div>
       <Input
-        handleResult={createPainting}
+        handleResult={createMessage}
         message={"What do you want to know little travaler?"}
       ></Input>
-      {/*<footer>*/}
-      {/*  <ChatPopUp />*/}
-      {/*</footer>*/}
     </div>
   );
 }
