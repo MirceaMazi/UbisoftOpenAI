@@ -1,8 +1,8 @@
 import Home from "./pages/Home/Home";
-import FortuneTeller from"./pages/FortuneTeller/FortuneTeller"
-import Drawer from"./pages/Drawer/Drawer"
+import FortuneTeller from "./pages/FortuneTeller/FortuneTeller"
+import Drawer from "./pages/Drawer/Drawer"
 import {
-    BrowserRouter, Routes, Route
+    BrowserRouter, Routes, Route, useNavigate
 } from "react-router-dom";
 
 function App() {

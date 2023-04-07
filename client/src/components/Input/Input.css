@@ -18,12 +18,14 @@
     width: 90%;
     padding: 1rem;
     border: none;
-    background-color: #40414f;
+    /*background-color: #40414f;*/
+    background-color: #F3E1FF;
     border-radius: 10px 0 0 10px;
-    color: #ffff;
+    color: #000;
 }
 
 .input-button {
+    position:static;
     width: 10%;
     max-width: 50px;
     background-image: url("https://cdn-icons-png.flaticon.com/512/3106/3106794.png");

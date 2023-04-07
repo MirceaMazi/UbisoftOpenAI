@@ -1,6 +1,8 @@
 import Input from "../../components/Input/Input";
 import "./FortuneTeller.css";
 import ChatPopUp from "../../components/ChatPopUp/ChatPopUp";
+import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 function FortuneTeller() {
   async function createPainting(prompt) {
@@ -16,35 +18,48 @@ function FortuneTeller() {
       //prettier-ignore
       "temperature": 0.7,
     };
-
-    await fetch("https://api.openai.com/v1/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        //prettier-ignore
-        "Authorization": "Bearer " + process.env.REACT_APP_OPENAI_API_KEY,
-      },
-      body: JSON.stringify(apiBody),
-    })
-      .then((data) => data.json())
-      .then((response) => {
-        messageEl.textContent = response.choices[0].text;
+    console.log(process.env.REACT_APP_OPENAI_API_KEY);
+    if(prompt !== ""){
+      await fetch("https://api.openai.com/v1/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          //prettier-ignore
+          "Authorization": "Bearer " + process.env.REACT_APP_OPENAI_API_KEY,
+        },
+        body: JSON.stringify(apiBody),
       })
-      .catch((err) => {
-        messageEl.textContent =
-          "It's too hard to focus so I cannot tell you right now the answer to that question";
-      });
+          .then((data) => data.json())
+          .then((response) => {
+            messageEl.textContent = response.choices[0].text;
+          })
+          .catch((err) => {
+            console.log(err);
+            messageEl.textContent =
+                "It's too hard to focus so I cannot tell you right now the answer to that question!";
+          });
+    }
+    else{
+      messageEl.textContent =
+          "I can't guess what question you want to ask. You have to write it!";
+    }
+
   }
+  let navigate = useNavigate();
+  const handleBackToHome = () => {
+    navigate("/");
+  };
   return (
     <div className="container">
+      <Button onClick={handleBackToHome} />
       <div className="message" id="response-message"></div>
       <Input
         handleResult={createPainting}
         message={"What do you want to know little travaler?"}
       ></Input>
-      <footer>
-        <ChatPopUp />
-      </footer>
+      {/*<footer>*/}
+      {/*  <ChatPopUp />*/}
+      {/*</footer>*/}
     </div>
   );
 }
