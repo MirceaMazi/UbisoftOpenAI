@@ -1,0 +1,30 @@
+.container {
+  background-image: url("../../assets/Globe-fortune-teller.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.message {
+  /*-webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 70%);*/
+  word-wrap: break-word;
+  font-size: 50px;
+  color: black;
+  width: 45vw;
+  text-align: center;
+  overflow: auto;
+  /*border-radius: 50%;*/
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+.input-container {
+  position: absolute;
+  top: 90%;
+}
+.message::-webkit-scrollbar {
+  display: none;
+}

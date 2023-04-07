@@ -1,0 +1,54 @@
+.painter-page-container {
+  background-image: url("../../assets/pictor_png.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-section {
+  transform: translate(-50%, 15%);
+}
+
+.resulted-image {
+  height: 512px;
+  width: 512px;
+}
+
+.input-text {
+  background-color: #e4e4e4;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 420px) {
+  .painter-page-container {
+    height: 53rem;
+    width: 55rem;
+  }
+
+  .main-section {
+    transform: translate(-100%, 100%);
+  }
+
+  .resulted-image {
+    height: 256px;
+    width: 256px;
+  }
+
+  .input-container {
+    right: 15%;
+  }
+}
